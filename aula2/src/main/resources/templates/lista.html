@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Spring Boot - Curso</title>
+</head>
+<body>
+	<h1>Formulário de Emprego</h1>
+	<h2>Lista de Emprego</h2>
+	<a href="/add">Adicionar um novo emprego</a>
+
+	<div th:each="emprego : ${empregos}">
+		<h4 th:inline="text">[[${emprego.titulo}]] na
+			[[${emprego.empresa}]]</h4>
+		<p th:text="${emprego.descricao}"></p>
+	</div>
+</body>
+</html>
