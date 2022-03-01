@@ -1,11 +1,28 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8">
 <title>Login</title>
 </head>
 <body>
-	<h2>Se chegou até aqui, top! Parabéns é que deu muito certo, bons
-		estudos</h2>
+	<div th:if="${param.error}">Senha ou usuário inválido.</div>
+
+	<div th:if="${param.logout}">Você está desconectado.</div>
+
+	<form th:action="@{/login}" method="post">
+		<div>
+			<label>Usuário: <input type="text" name="username">
+			</label>
+		</div>
+
+		<div>
+			<label>Senha: <input type="password" name="password">
+			</label>
+		</div>
+
+		<div>
+			<input type="submit" value="Entrar">
+		</div>
+	</form>
 </body>
 </html>
