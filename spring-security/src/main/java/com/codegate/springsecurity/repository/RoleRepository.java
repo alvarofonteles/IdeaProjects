@@ -7,5 +7,5 @@ import com.codegate.springsecurity.model.User;
 
 public interface RoleRepository extends CrudRepository<Role, Long> {
 
-	User findByRole(String role);
+	Role findByRole(String role);
 }
