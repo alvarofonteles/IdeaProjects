@@ -6,17 +6,17 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class HomeController {
 
-	@RequestMapping("/")
+	@RequestMapping("/fragments")
 	public String index() {
 		return "index";
 	}
 
-	@RequestMapping("/blog")
+	@RequestMapping("/fragments/blog")
 	public String blog() {
 		return "blog";
 	}
 
-	@RequestMapping("/contact")
+	@RequestMapping("/fragments/contact")
 	public String contact() {
 		return "contact";
 	}
